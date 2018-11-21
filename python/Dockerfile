@@ -26,6 +26,6 @@ RUN apt-get update && \
     apt-get -y install python3-pip && \
     pip3 install --upgrade pip
 
-RUN rm -rf /tmp/Python-3.5.0.tar.xz /tmp/Python-3.5.3
+#RUN rm -rf /tmp/Python-3.5.0.tar.xz /tmp/Python-3.5.3
 
 
