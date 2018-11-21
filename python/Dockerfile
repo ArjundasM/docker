@@ -26,14 +26,6 @@ RUN apt-get update && \
     apt-get -y install python3-pip && \
     pip3 install --upgrade pip
 
-
-WORKDIR /
-
-RUN wget http://downloads.razorthink.net/bigbrain/py-libs/rztdl-0.1.2-py3-none-any.whl && \
-    wget http://downloads.razorthink.net/bigbrain/py-libs/bbcliutils-0.1-py2.py3-none-any.whl && \
-    pip3.5 install rztdl-0.1.2-py3-none-any.whl && \
-    pip3.5 install bbcliutils-0.1-py2.py3-none-any.whl 
-
 RUN rm -rf /tmp/Python-3.5.0.tar.xz /tmp/Python-3.5.3
 
 
