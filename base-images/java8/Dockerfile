@@ -3,4 +3,4 @@ FROM ubuntu:18.04
 
 RUN apt-get update -y && \
     apt-get upgrade -y && \
-    apt-gett install openjdk-8-jdk -y
+    apt-get install openjdk-8-jdk -y
