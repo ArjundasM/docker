@@ -1,0 +1,23 @@
+version: '3.7'
+
+services:
+  mysql-backup:
+    labels:
+      deployment.name: mysql-backup
+    image: mysql-backup:latest
+    volumes:
+      - ./backup:/backup
+      - /mysql.sh:/backup/mysql.sh
+    command: bash /backup/mysql.sh
+    environment:
+      AWS_KEY: ABCDEFGHRJIKLMNOPQRSTUVW
+      AWS_SECRET: asdasdakjsndjankjsdnjasnkdnakjsndja
+    deploy:
+      restart_policy:
+        condition: on-failure
+      update_config:
+        order: start-first
+networks:
+  default:
+    external: true
+    name: sample
